@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: 'Catchy Mager';
+    src: url('../fonts/catchy-mager.otf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'TT Hoves Regular';
+    src: url('../fonts/TT Hoves Pro Trial Expanded Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'TT Hoves Bold';
+    src: url('../fonts/TT Hoves Pro Trial Bold.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'TT Hoves Light';
+    src: url('../fonts/TT Hoves Pro Trial Expanded Light.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'TT Hoves Hairline';
+    src: url('../fonts/TT Hoves Pro Trial Expanded Hairline.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: #1a3950; /* logo */
+    --cor1: #1A3949; /* menu */
+    --cor2: #fff;
+    --cor3: #d9d9d9;
+    --cor4: #faf9f8; /* página depoimentos chacareiros */
+    --cor5: #000000;
+
+    --fonte-padrao: 'Catchy Mager', cursive;
+    --fonte-destaque: 'TT Hoves Regular', cursive;
+    --fonte-destaque-bold: 'TT Hoves Bold', cursive;
+    --fonte-destaque-light: 'TT Hoves Light', cursive;
+    --fonte-destaque-hairline: 'TT Hoves Hairline', cursive;
+}
+
+/* Garantir que todo o conteúdo seja incluído na largura especificada */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao), cursive;
+}
+
+header {
+    background-color: #1a3950;
+    box-shadow: 0px 1px 1px #1A3949;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    /*padding: 1.5rem 6rem;*/
+    /*border: 1px solid #faf9f8;*/
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu h1 {
+    color: #d9d9d9;
+    font-size: 20px;
+    text-align: left;
+ }
+
+.menu img{
+    width: 50px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: var(--cor2);
+    font-family: var(--fonte-destaque), cursive;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+main {
+    background-color: var(--cor4);
+    padding: 20px; /* Essa é o espaçamento entre o texto/imagem e a borda do bloco cor 4*/
+    border-radius: 10px; /* borda arredondada do bloco */
+    text-align: center; /* alinha todo o conteúdo texto/imagem ao centro */
+
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto; /* centraliza todo o conteúdo do bloco ao centro da página indepentede do tamanho da tela */
+}
+
+p {
+    text-align: justify; /* justifica todo o texto que tiver em um parágrafo */
+}
+
+img {
+    width: 100%;
+}
+
+
+h1 {
+    font-size: 3rem;
+    color: var(--cor2);
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+        border: 1px solid #000000;
+
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+        margin: 0;
+    }
+
+    .open {
+        display: block;
+    }
+
+
+}
